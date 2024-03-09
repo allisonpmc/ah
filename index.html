@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Presented by BUNQ</title>
+
+    <link rel="icon" href="ICON.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+
+    <!-- demo styles -->
+    <link rel="stylesheet" href="demo/style.css">
+
+    <!-- lib styles -->
+    <link rel="stylesheet" href="dist/zuck.css">
+    
+    <!-- lib skins -->
+    <link rel="stylesheet" href="dist/skins/snapgram.css">
+    <link rel="stylesheet" href="dist/skins/vemdezap.css">
+    <link rel="stylesheet" href="dist/skins/facesnap.css">
+    <link rel="stylesheet" href="dist/skins/snapssenger.css">
+  </head>
+
+  <body>
+    <a class="disclaimer">
+      <p>Presented by</p>
+      <p class="disclaimer-text2">BUNQ</p>
+    </a>
+    <div class="info-welcome">
+      <img src = "funwrapf.png" alt="SVG"/>
+      <p>BUNQ + YOU</p>
+      <p class="text-info-welcome">Let's UNWRAP your finances. How did you do?</p>
+    </div>
+    <div id="stories" class="storiesWrapper">
+
+    </div>
+    <script src="dist/zuck.min.js"></script>
+    <script src="demo/script.js"></script>
+    <script>
+      var currentSkin = getCurrentSkin();
+      var stories = new Zuck('stories', {
+        backNative: true,
+        previousTap: true,
+        skin: currentSkin['name'],
+        autoFullScreen: currentSkin['params']['autoFullScreen'],
+        avatars: currentSkin['params']['avatars'],
+        paginationArrows: currentSkin['params']['paginationArrows'],
+        list: currentSkin['params']['list'],
+        cubeEffect: currentSkin['params']['cubeEffect'],
+        localStorage: true,
+        stories: [
+          Zuck.buildTimelineItem(
+            "ramon", 
+            "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/1.jpg",
+            "Explore",
+            "light.png",
+            timestamp(),
+            [
+              ["ramon-1", "photo", 8, "final_plot-5.png", "", '', false, false, timestamp()],
+              ["ramon-2", "video", 8, "key1.mp4", "", '', false, false, timestamp()],
+              ["ramon-2", "video", 8, "countryvid.mp4", '', false, false, timestamp()],
+              ["ramon-2", "video", 8, "key2.mp4", '', false, false, timestamp()],
+              ["ramon-2", "video", 8, "Impulsive.mp4", '', false, false, timestamp()],
+              ["ramon-2", "video", 8, "trees.mp4", '', false, false, timestamp()],
+              ["ramon-2", "video", 8, "animal1.mp4", '', false, false, timestamp()],
+              ["ramon-2", "video", 8, "almost.mp4", '', false, false, timestamp()],
+              ["ramon-2", "video", 8, "morty.mp4", '', false, false, timestamp()],
+            ]
+          ),
+        ]
+      });
+    </script>
